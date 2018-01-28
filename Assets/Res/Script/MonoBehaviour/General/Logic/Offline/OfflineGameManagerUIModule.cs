@@ -27,6 +27,7 @@ public class OfflineGameManagerUIModule : MonoBehaviour {
 
     private GameMapEnum[] availableGameMapList = new GameMapEnum[]{
         GameMapEnum.Desert,
+        GameMapEnum.Ensk
     };
 
     private int currentGameMap = 0;
@@ -34,7 +35,9 @@ public class OfflineGameManagerUIModule : MonoBehaviour {
     private GameYearEnum[] availableGameYearList = new GameYearEnum[]{
         GameYearEnum.WW1,
         GameYearEnum.WW2Early,
-        GameYearEnum.WW2Late
+        GameYearEnum.WW2Middle,
+        GameYearEnum.WW2Late,
+        GameYearEnum.ColdWar
     };
 
     private int currentGameYear = 0;
@@ -50,6 +53,24 @@ public class OfflineGameManagerUIModule : MonoBehaviour {
         if (PlayerPrefs.HasKey("OfflineGamePropertyAssemble"))
             JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("OfflineGamePropertyAssemble"), offlineGamePropertyAssemble);
         else {
+            offlineGamePropertyAssemble.Assemble.Add(
+                new OfflineGameProperty() {
+                    gameYearEnum = GameYearEnum.WW2Middle,
+                    presetName = "Default-WW2Middle-1V1",
+                    TeamANumber = 1,
+                    TeamBNumber = 1
+                }
+            );
+
+            offlineGamePropertyAssemble.Assemble.Add(
+                new OfflineGameProperty() {
+                    gameYearEnum = GameYearEnum.WW1,
+                    presetName = "Default-WW1-1V1",
+                    TeamANumber = 1,
+                    TeamBNumber = 1
+                }
+            );
+
             offlineGamePropertyAssemble.Assemble.Add(
                 new OfflineGameProperty() {
                     gameYearEnum = GameYearEnum.WW2Late,
@@ -68,14 +89,7 @@ public class OfflineGameManagerUIModule : MonoBehaviour {
                 }
             );
 
-            offlineGamePropertyAssemble.Assemble.Add(
-                new OfflineGameProperty() {
-                    gameYearEnum = GameYearEnum.WW2Early,
-                    presetName = "Default-WW2Early-1V1",
-                    TeamANumber = 1,
-                    TeamBNumber = 1
-                }
-            );
+
         }
 
 
@@ -142,24 +156,7 @@ public class OfflineGameManagerUIModule : MonoBehaviour {
         foreach (OfflineGameProperty gameProperty in offlineGamePropertyAssemble.Assemble) {
             CreateTemplateInstance(gameProperty);
         }
-        //Garage
-        OpenGarage_Button.onClick.AddListener(() => {
-            //ClientNetwork.Instance.StartCoroutine(
-            //    AssetBundleManager.RequestScene(true, true, "garage", (myReturnValue) => {
-            //        Hashtable vehicleList = new Hashtable();
 
-            //        AccountDataManager.InstanceAllHastables();
-
-            //        foreach (string Vehicle in AccountDataManager.ExcelVehicleData.Keys) {
-            //            vehicleList.Add(Vehicle, new Crew.CrewInfo());
-            //        }
-
-            //        GarageTankManger.Instance.UpdataTankList(vehicleList, true);
-
-            //        AccountManager.Instance.DataUpdata();
-            //    }, null)
-            //);
-        });
 
         OpenRaceMode_Button.onClick.AddListener(()=>{
             OfflineGameManager._Instance.onRaceGamerequested();

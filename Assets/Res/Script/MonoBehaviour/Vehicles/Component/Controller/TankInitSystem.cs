@@ -237,6 +237,7 @@ public class TankInitSystem : BaseInitSystem
             mt.maxTurretAngle = MTParameter.maxTurretAngle;
             mt.gunDegreesPerSecond = MTParameter.gunDegreesPerSecond;
             mt.turretDegreesPerSecond = MTParameter.turretDegreesPerSecond;
+            mt.offset = MTParameter.offset;
             mt.isMobile = isMobile;
             #endregion
             #region 主摄像机设置
@@ -266,12 +267,13 @@ public class TankInitSystem : BaseInitSystem
             }
             #endregion
             #region 坦克发射器脚本设置
+            TFParameter.recoilTransform = referenceManager.FireForceFeedbackPoint.transform;
+
             TankFire tf = TankScript.GetComponent<TankFire>();
             tf.tankFireParameter = TFParameter;
             tf.tankInitSystem = this;
             tf.MachineGunFFPoint = referenceManager.MachineGunFFPoint.transform;
             tf.FFPoint = referenceManager.FFPoint.transform;
-            tf.FireRecoilPoint = referenceManager.FireForceFeedbackPoint.transform;
             tf.FireEffectPoint = referenceManager.EffectStart.transform;
             tf.BulletCountList = BulletCountList;
             tf.GunDym = GunTransform.transform.Find("GunDym").GetComponent<Animator>();

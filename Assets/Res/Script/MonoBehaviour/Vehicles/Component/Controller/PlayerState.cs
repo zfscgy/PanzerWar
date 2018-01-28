@@ -186,7 +186,7 @@ public class PlayerState : BasePlayerState {
 
 
 	public void UpdataGameNote(string Note,bool ForceOpen =false){
-		if (Mine&&(uGUI_QualitySetting.B_inBattleMessage||ForceOpen)) {
+		if (Mine||ForceOpen) {
 			CancelInvoke ("CloseGameNote");
 			UpdateEventMessage (UIEvent.Message, Note);
 			Invoke ("CloseGameNote", 1.2f);
@@ -752,15 +752,15 @@ public class PlayerState : BasePlayerState {
 			#endregion
 		}
 		
-		foreach(Object temp in DiedDestoryObjects){
-			if(temp){
-				foreach (HitBox tempHB in ((GameObject)temp).GetComponentsInChildren<HitBox>()){
-					if(tempHB){
-						tempHB.enabled =false;
-					}
-				}
-			}
-		}
+		//foreach(Object temp in DiedDestoryObjects){
+		//	if(temp){
+		//		foreach (HitBox tempHB in ((GameObject)temp).GetComponentsInChildren<HitBox>()){
+		//			if(tempHB){
+		//				tempHB.enabled =false;
+		//			}
+		//		}
+		//	}
+		//}
 
 		transform.tag = "Untagged";
         if (TankScript.GetComponent<TankFire>().tankFireParameter.HasMachineGun){

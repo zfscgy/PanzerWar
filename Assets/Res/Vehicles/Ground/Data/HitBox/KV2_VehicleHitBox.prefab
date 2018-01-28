@@ -1598,7 +1598,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 65
 --- !u!114 &114022656089843296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 40
 --- !u!114 &114147873210462244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 70
 --- !u!114 &114230770921766254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 75
 --- !u!114 &114245378576222816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 75
 --- !u!114 &114301829399744988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1678,7 +1678,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 60
 --- !u!114 &114561532382844136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 40
 --- !u!114 &114618838542947530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 40
 --- !u!114 &114624581177346106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1722,11 +1722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d3b844f9319444587ff9ada0bbe5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBoxType: 0
+  hitBoxType: 1
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 220
 --- !u!114 &114641930816429282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 30
 --- !u!114 &114694259479384930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 75
 --- !u!114 &114697389598873556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 40
 --- !u!114 &114886908638971516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 75
 --- !u!114 &114931087953727920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1806,4 +1806,4 @@ MonoBehaviour:
   Owner: {fileID: 0}
   CenterBound: {fileID: 0}
   ReactiveArmorDistance: 0.2
-  Armor: 90
+  Armor: 75

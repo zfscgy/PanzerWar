@@ -29,6 +29,10 @@ ModelImporter:
     100042: Wheel03.001
     100044: Wheel04
     100046: Wheel04.001
+    100048: NurbsPath.001
+    100050: NurbsPath.002
+    100052: LeftTrack
+    100054: RightTrack
     400000: Gun
     400002: LeftUpperWheel
     400004: LeftWheel
@@ -53,6 +57,10 @@ ModelImporter:
     400042: Wheel03.001
     400044: Wheel04
     400046: Wheel04.001
+    400048: NurbsPath.001
+    400050: NurbsPath.002
+    400052: LeftTrack
+    400054: RightTrack
     2300000: Gun
     2300002: MainBody
     2300004: Others
@@ -72,6 +80,10 @@ ModelImporter:
     2300032: Wheel03.001
     2300034: Wheel04
     2300036: Wheel04.001
+    2300038: NurbsPath.001
+    2300040: NurbsPath.002
+    2300042: LeftTrack
+    2300044: RightTrack
     3300000: Gun
     3300002: MainBody
     3300004: Others
@@ -91,6 +103,10 @@ ModelImporter:
     3300032: Wheel03.001
     3300034: Wheel04
     3300036: Wheel04.001
+    3300038: NurbsPath.001
+    3300040: NurbsPath.002
+    3300042: LeftTrack
+    3300044: RightTrack
     4300000: Wheel01.003
     4300002: Wheel00.003
     4300004: Wheel00.002
@@ -110,6 +126,10 @@ ModelImporter:
     4300032: Gun
     4300034: root
     4300036: Others
+    4300038: NurbsPath.002
+    4300040: NurbsPath.001
+    4300042: LeftTrack
+    4300044: RightTrack
     7400000: RightUpperWheel|Fanbu|Take 001|BaseLayer
     7400002: RightUpperWheel|LeftUpperWheel|Take 001|BaseLayer
     7400004: RightUpperWheel|LeftWheel|Take 001|BaseLayer
@@ -205,10 +225,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

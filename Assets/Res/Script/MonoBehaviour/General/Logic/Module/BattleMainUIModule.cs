@@ -37,7 +37,12 @@ public class BattleMainUIModule : MonoBehaviour {
         for (int i = 0; i < uiReference.AmmunitionAdders.Length; i++) {
             int current = i;
 
-            uiReference.AmmunitionChangeFielders[current].text = PlayerPrefs.GetInt(string.Format("{0}{1}", currentSelectedVehicle, current)).ToString();
+            if(PlayerPrefs.HasKey(string.Format("{0}{1}", currentSelectedVehicle, current))){
+                uiReference.AmmunitionChangeFielders[current].text = PlayerPrefs.GetInt(string.Format("{0}{1}", currentSelectedVehicle, current)).ToString();
+            }
+            else{
+                uiReference.AmmunitionChangeFielders[current].text = "10";
+            }
 
             uiReference.AmmunitionAdders[current].onClick.AddListener(() => {
                 int ammoCount = int.Parse(uiReference.AmmunitionChangeFielders[current].text);

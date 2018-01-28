@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 02025eaf4f0935e4e8629be3c7e8e5f3
+timeCreated: 1475376508
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 002
+    100002: 062D06FF00
+    100004: 092D09FF00
+    100006: 0C2D0CFF00
+    100008: 0F2D0FFF00
+    100010: 122D12FF00
+    100012: 152D15FF00
+    100014: 182D18FF00
+    100016: 1B2D1BFF00
+    100018: 1E2D1EFF00
+    100020: 212D21FF00
+    100022: 242D24FF00
+    100024: 272D27FF00
+    100026: 2A2D2AFF00
+    100028: 2D2D2DFF00
+    100030: Fanbu
+    100032: Gun
+    100034: LeftTrack
+    100036: LeftUpperWheel
+    100038: LeftWheel
+    100040: LeftWheelBone
+    100042: MainBody
+    100044: Oil
+    100046: Oil001
+    100048: RightTrack
+    100050: RightUpperWheel
+    100052: RightWheel
+    100054: RightWheelBone
+    100056: root
+    100058: //RootNode
+    100060: Turret
+    400000: 002
+    400002: 062D06FF00
+    400004: 092D09FF00
+    400006: 0C2D0CFF00
+    400008: 0F2D0FFF00
+    400010: 122D12FF00
+    400012: 152D15FF00
+    400014: 182D18FF00
+    400016: 1B2D1BFF00
+    400018: 1E2D1EFF00
+    400020: 212D21FF00
+    400022: 242D24FF00
+    400024: 272D27FF00
+    400026: 2A2D2AFF00
+    400028: 2D2D2DFF00
+    400030: Fanbu
+    400032: Gun
+    400034: LeftTrack
+    400036: LeftUpperWheel
+    400038: LeftWheel
+    400040: LeftWheelBone
+    400042: MainBody
+    400044: Oil
+    400046: Oil001
+    400048: RightTrack
+    400050: RightUpperWheel
+    400052: RightWheel
+    400054: RightWheelBone
+    400056: root
+    400058: //RootNode
+    400060: Turret
+    2300000: 002
+    2300002: 062D06FF00
+    2300004: 092D09FF00
+    2300006: 0C2D0CFF00
+    2300008: 0F2D0FFF00
+    2300010: 122D12FF00
+    2300012: 152D15FF00
+    2300014: 182D18FF00
+    2300016: 1B2D1BFF00
+    2300018: 1E2D1EFF00
+    2300020: 212D21FF00
+    2300022: 242D24FF00
+    2300024: 272D27FF00
+    2300026: 2A2D2AFF00
+    2300028: 2D2D2DFF00
+    2300030: Fanbu
+    2300032: Gun
+    2300034: LeftTrack
+    2300036: MainBody
+    2300038: Oil
+    2300040: Oil001
+    2300042: RightTrack
+    2300044: root
+    2300046: Turret
+    3300000: 002
+    3300002: 062D06FF00
+    3300004: 092D09FF00
+    3300006: 0C2D0CFF00
+    3300008: 0F2D0FFF00
+    3300010: 122D12FF00
+    3300012: 152D15FF00
+    3300014: 182D18FF00
+    3300016: 1B2D1BFF00
+    3300018: 1E2D1EFF00
+    3300020: 212D21FF00
+    3300022: 242D24FF00
+    3300024: 272D27FF00
+    3300026: 2A2D2AFF00
+    3300028: 2D2D2DFF00
+    3300030: Fanbu
+    3300032: Gun
+    3300034: LeftTrack
+    3300036: MainBody
+    3300038: Oil
+    3300040: Oil001
+    3300042: RightTrack
+    3300044: root
+    3300046: Turret
+    4300000: MainBody
+    4300002: Oil
+    4300004: Oil001
+    4300006: 002
+    4300008: Turret
+    4300010: Gun
+    4300012: root
+    4300014: Fanbu
+    4300016: RightTrack
+    4300018: LeftTrack
+    4300020: 212D21FF00
+    4300022: 242D24FF00
+    4300024: 272D27FF00
+    4300026: 2A2D2AFF00
+    4300028: 2D2D2DFF00
+    4300030: 122D12FF00
+    4300032: 152D15FF00
+    4300034: 182D18FF00
+    4300036: 1B2D1BFF00
+    4300038: 1E2D1EFF00
+    4300040: 0C2D0CFF00
+    4300042: 0F2D0FFF00
+    4300044: 062D06FF00
+    4300046: 092D09FF00
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

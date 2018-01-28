@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dcaf22382aa4ff6b99fcc1496a5594, type: 3}
+  m_Name: Mark_IV_VehicleTextData
+  m_EditorClassIdentifier: 
+  AssetName: Mark_IV
+  PTCParameter:
+    TankWheelCollider: {fileID: 1324272422038444, guid: aa9d96da7792542a898ac678c9082b88,
+      type: 2}
+    CenterOfGravity: {fileID: 0}
+    SideWaysFrictionExtremumFactor: 1.2
+    SideWaysFrictionAsymptoteFactor: 1.2
+    MaxSpeed: 16
+    MinSpeed: -8
+    MaxAngularVelocity: 22
+    PushSpeed: 1
+    BackSpeed: 1
+    Mass: 2900
+    Drag: 0.2
+    AirDrag: 0.2
+    HAconfigSetting:
+      rotateSpeed:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 6.5
+          inSlope: 0
+          outSlope: -0.08125
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 80
+          value: 0
+          inSlope: -0.08125
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      brake:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 12.5
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 80
+          value: 1000
+          inSlope: 12.5
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    VAconfigSetting:
+      acceleration:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 750
+          inSlope: 0
+          outSlope: -9.375
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 80
+          value: 0
+          inSlope: -9.375
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      brake:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 2
+          time: 0
+          value: 1000
+          inSlope: 0
+          outSlope: 1.25
+          tangentMode: 0
+        - serializedVersion: 2
+          time: 80
+          value: 1100
+          inSlope: 1.25
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    vehicleEngineSoundData: {fileID: 11400000, guid: 5a9c405458013467386b0203f1dafe90,
+      type: 2}
+  TFParameter:
+    ReloadTime: 4.2
+    FireRecoil: 250
+    AmmoCount: 30
+    HasMachineGun: 0
+    bulletType: {fileID: 102392, guid: c7a9ac1ea792e4c03a5ec7d3918fc16e, type: 2}
+    GymAnimation: {fileID: 0}
+    muzzleFire: 0
+    fireState: 0
+    advanceFireClass:
+      LargeFinish: 0
+      LargeNowTime: 0
+      LargeReloadTime: 0
+      SmallNowTime: 0
+      SmallReloadTime: 0
+      MaxSmallAmmo: 0
+      SmallAmmoLeft: 0
+  ExtraTF: 0
+  multiTurrets:
+  - ObjectPath: 
+    tankFireParameter:
+      ReloadTime: 0
+      FireRecoil: 0
+      AmmoCount: 0
+      HasMachineGun: 0
+      bulletType: {fileID: 0}
+      GymAnimation: {fileID: 0}
+      muzzleFire: 0
+      fireState: 0
+      advanceFireClass:
+        LargeFinish: 0
+        LargeNowTime: 0
+        LargeReloadTime: 0
+        SmallNowTime: 0
+        SmallReloadTime: 0
+        MaxSmallAmmo: 0
+        SmallAmmoLeft: 0
+    MTParameter:
+      maxTurretAngle: 0
+      UpMaxDegree: 0
+      DownMaxDegree: 0
+      turretDegreesPerSecond: 0
+      gunDegreesPerSecond: 0
+      offset: 0
+  MTParameter:
+    maxTurretAngle: 20
+    UpMaxDegree: 20
+    DownMaxDegree: 7
+    turretDegreesPerSecond: 18
+    gunDegreesPerSecond: 9
+    offset: 45
+  PSParameter:
+    Health: 120
+    engineType: 2
+    nationType: 4
+    vehicleType: 0

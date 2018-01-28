@@ -46,10 +46,10 @@ TagManager:
   - Ignore
   - CollapseAnimationTrigger
   - SPGIndicator
-  - 
-  - 
-  - 
-  - 
+  - FogVolumeShadowCaster
+  - FogVolume
+  - FogVolumeSurrogate
+  - FogVolumeUniform
   - 
   - 
   - 

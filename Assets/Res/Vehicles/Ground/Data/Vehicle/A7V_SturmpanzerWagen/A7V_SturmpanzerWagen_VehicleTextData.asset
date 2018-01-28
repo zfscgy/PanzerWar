@@ -104,7 +104,7 @@ MonoBehaviour:
       type: 2}
   TFParameter:
     ReloadTime: 4.9
-    FireRecoil: 250
+    FireRecoil: 120
     AmmoCount: 30
     HasMachineGun: 0
     bulletType: {fileID: 100018, guid: c5355401fd9142c4a9aa4db1488e5ec9, type: 2}

@@ -26,7 +26,6 @@ MonoBehaviour:
     Mass: 3550
     Drag: 0.2
     AirDrag: 0.2
-    TrackData: {fileID: 11400000, guid: 990e47576801be0468cf35835aff2125, type: 2}
     HAconfigSetting:
       rotateSpeed:
         serializedVersion: 2
@@ -105,12 +104,13 @@ MonoBehaviour:
       type: 2}
   TFParameter:
     ReloadTime: 3
-    FireRecoil: 50
+    FireRecoil: 120
     AmmoCount: 40
     HasMachineGun: 0
+    bulletType: {fileID: 0}
     GymAnimation: {fileID: 9100000, guid: 32affdb77e2ba4892ac917d43a7d4e3c, type: 2}
-    MuzzleFire: 0
-    FireState: 0
+    muzzleFire: 0
+    fireState: 0
     advanceFireClass:
       LargeFinish: 0
       LargeNowTime: 0
@@ -130,3 +130,5 @@ MonoBehaviour:
   PSParameter:
     Health: 1200
     engineType: 1
+    nationType: 0
+    vehicleType: 0

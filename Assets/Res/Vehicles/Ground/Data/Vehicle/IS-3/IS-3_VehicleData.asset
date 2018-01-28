@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3b8c5f76e6e3649b66d3060efd80bc, type: 3}
+  m_Name: IS-3_VehicleData
+  m_EditorClassIdentifier: 
+  vehicleTextData: {fileID: 11400000, guid: 6d5cf1490605740b99118dc1c82b3646, type: 2}
+  modelData:
+    MainModel: {fileID: 1261155175416682, guid: ff8d3c4b2c786485bb0edd3553d98413,
+      type: 2}
+    LOD: {fileID: 0}
+    HitBox: {fileID: 11400000, guid: 0849d66a4a53d4a7f9b5c5bfe4f3de31, type: 2}
+  cacheData:
+    FFPoint:
+      localPosition: {x: 0, y: -0.068, z: 0.512}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    EffectStart:
+      localPosition: {x: 0, y: -0.068, z: 5.12}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    EngineSmoke:
+      localPosition: {x: -1.0934, y: 0.67412, z: -2.3158}
+      localEulerAngle: {x: 325.88135, y: 185.98569, z: -0.00000012890996}
+    EngineSound:
+      localPosition: {x: 0, y: 0.76, z: -1.63}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    MainCameraFollowTarget:
+      localPosition: {x: 0, y: 2.775, z: 0.25}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    MainCameraGunner:
+      localPosition: {x: 0, y: 0.57, z: 0}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    FireForceFeedbackPoint:
+      localPosition: {x: 0, y: 0.11, z: -2.34}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    CenterOfGravity:
+      localPosition: {x: 0, y: 0.6, z: 0}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    MachineGunFFPoint:
+      localPosition: {x: 0.345, y: 1.7053, z: 2.181}
+      localEulerAngle: {x: -0, y: 0, z: 0}
+    StartPoint: {x: 0, y: 0, z: 0}

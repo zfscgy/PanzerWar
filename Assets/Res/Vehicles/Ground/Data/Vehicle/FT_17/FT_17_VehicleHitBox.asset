@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38dc38bd21154a418dc85f764272203, type: 3}
+  m_Name: FT_17_VehicleHitBox
+  m_EditorClassIdentifier: 
+  ReferModel: {fileID: 0}
+  ExternalArmorModel: {fileID: 100000, guid: d8ea3bbfa979549dfaaeb3e8c6d24a8f, type: 3}
+  HitBoxPrefab: {fileID: 1718172611414590, guid: 471bf5a9f572749c8b2dae77b0219452,
+    type: 2}

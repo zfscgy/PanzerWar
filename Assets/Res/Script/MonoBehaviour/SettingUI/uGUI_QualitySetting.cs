@@ -2,31 +2,31 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public enum ScrollbarLevel{
-	Lv1,
-	Lv2,
-	Lv3,
-	Lv4
+[System.Serializable]
+public class GraphicSetting{
+    public bool isFullResoultion;
+
+    public bool isSunRays;
+
+    public bool isHighTextureQuality;
 }
 
 public class uGUI_QualitySetting : MonoBehaviour {
 	public static GameObject Panel;
 
-	public Scrollbar TextureQuality,ShadowDistance,ShadowQuality;
-	ScrollbarLevel TextureQualityLv,ShadowDistanceLv,ShadowQualityLv;
-	public Dropdown ScreenSolution;
-
 	public GameObject Settings_Panel;
 
-	public static bool AdvanceTrackSystem = false;
-	public static bool B_inBattleMessage = false;
+    public Toggle ToggleFullResoultion, ToggleSunRays, ToggleHighTextureQuality;
+
 	public static Rect PhysicsScreen = new Rect();
+
 	public static uGUI_QualitySetting _Instance;
+
+    public static GraphicSetting currentGraphicSetting = new GraphicSetting();
 
 	public static void Init (){
 		Open();
 		_Instance = Panel.GetComponentInChildren<uGUI_QualitySetting>();
-		_Instance.ReadSetting ();
 		Panel.transform.GetChild(0).GetChild(0).gameObject.SetActive (false);
 	}
 
@@ -40,50 +40,48 @@ public class uGUI_QualitySetting : MonoBehaviour {
 		}
 	}
 	void Start(){
-		System.Collections.Generic.List<Dropdown.OptionData> ScreenSolutionDropDownOptions = new System.Collections.Generic.List<Dropdown.OptionData>();
-		ScreenSolutionDropDownOptions.Add (new Dropdown.OptionData ("100%", null));
-		ScreenSolutionDropDownOptions.Add (new Dropdown.OptionData ("75%", null));
-		ScreenSolutionDropDownOptions.Add (new Dropdown.OptionData ("60%", null));
-		ScreenSolution.AddOptions (ScreenSolutionDropDownOptions);
-		uGUI_QualitySetting._Instance.ScreenSolution.value = PlayerPrefs.GetInt ("CustomScreenSolution",2);
-		ScreenSolution.RefreshShownValue ();
-		ScreenSolution.onValueChanged.AddListener (OnScreenSolutionValueChanged);
-		ReadSetting ();
+        ReadSetting();
+
+        ToggleFullResoultion.onValueChanged.AddListener((condition)=>{
+            currentGraphicSetting.isFullResoultion = condition;
+            SaveSetting();
+        });
+
+        ToggleSunRays.onValueChanged.AddListener((condition) => {
+            currentGraphicSetting.isSunRays = condition;
+            SaveSetting();
+        });
+
+        ToggleHighTextureQuality.onValueChanged.AddListener((condition) => {
+            currentGraphicSetting.isHighTextureQuality = condition;
+            SaveSetting();
+        });
 	}
 
-	public static int CurrentSolutionValue = -1;
+    void ReadSetting(){
+        JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Graphic"), currentGraphicSetting);
 
-	void OnScreenSolutionValueChanged(int value){
-		if (ScreenSolution.value != CurrentSolutionValue) {
-			ApplySolution (ScreenSolution.value);
-			CurrentSolutionValue = ScreenSolution.value;
-		}
-	}
-	public static void ApplySolution(int _ScreenSolutionLv){
-		switch (_ScreenSolutionLv) {
-			case 0:
-				SetScreenSolution (PhysicsScreen.width, PhysicsScreen.height);
-				break;
-			case 1:
-				SetScreenSolution (PhysicsScreen.width*0.85f, PhysicsScreen.height*0.85f);
-				break;
-			case 2:
-				SetScreenSolution (PhysicsScreen.width*0.75f, PhysicsScreen.height*0.75f);
-				break;
-		}
-		PlayerPrefs.SetInt ("CustomScreenSolution", _ScreenSolutionLv);
-	}
+        ToggleFullResoultion.isOn = currentGraphicSetting.isFullResoultion;
+        ToggleSunRays.isOn = currentGraphicSetting.isSunRays;
+        ToggleHighTextureQuality.isOn = currentGraphicSetting.isHighTextureQuality;
 
-	public static void SetScreenSolution(float Width,float Height){
-		Screen.SetResolution (Mathf.RoundToInt(Width), Mathf.RoundToInt(Height), false);
-	}
+        if(currentGraphicSetting.isFullResoultion){
+            
+        }
+        else {
+            Screen.SetResolution(Mathf.RoundToInt(Screen.width * 0.8f),Mathf.RoundToInt(Screen.height * 0.8f),true,30);
+        }
 
-	public void SaveQuality(){
+        if(currentGraphicSetting.isHighTextureQuality){
+            QualitySettings.masterTextureLimit = 0;
+        }
+        else {
+            QualitySettings.masterTextureLimit = 1;
+        }
+    }
 
-
-	}
-	public void ReadSetting(){
-
-	}
+    void SaveSetting(){
+        PlayerPrefs.SetString("Graphic",JsonUtility.ToJson(currentGraphicSetting));
+    }
 
 }

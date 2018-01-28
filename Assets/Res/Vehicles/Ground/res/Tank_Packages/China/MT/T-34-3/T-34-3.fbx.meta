@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: c67d21426bf704bb98e33e47463c375c
+timeCreated: 1506934568
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: 062D06FF00
+    100002: 092D09FF00
+    100004: 0C2D0CFF00
+    100006: 0F2D0FFF00
+    100008: 122D12FF00
+    100010: 152D15FF00
+    100012: 182D18FF00
+    100014: 1B2D1BFF00
+    100016: 1E2D1EFF00
+    100018: 212D21FF00
+    100020: 242D24FF00
+    100022: 272D27FF00
+    100024: 2A2D2AFF00
+    100026: 2D2D2DFF00
+    100028: Gun
+    100030: LeftUpperWheel
+    100032: LeftWheel
+    100034: LeftWheelBone
+    100036: MainBody
+    100038: RightUpperWheel
+    100040: RightWheel
+    100042: RightWheelBone
+    100044: root
+    100046: //RootNode
+    100048: Turret
+    100050: 0C2D0CFF00.001
+    100052: 0F2D0FFF00.001
+    100054: LeftTrack
+    100056: RightTrack
+    400000: 062D06FF00
+    400002: 092D09FF00
+    400004: 0C2D0CFF00
+    400006: 0F2D0FFF00
+    400008: 122D12FF00
+    400010: 152D15FF00
+    400012: 182D18FF00
+    400014: 1B2D1BFF00
+    400016: 1E2D1EFF00
+    400018: 212D21FF00
+    400020: 242D24FF00
+    400022: 272D27FF00
+    400024: 2A2D2AFF00
+    400026: 2D2D2DFF00
+    400028: Gun
+    400030: LeftUpperWheel
+    400032: LeftWheel
+    400034: LeftWheelBone
+    400036: MainBody
+    400038: RightUpperWheel
+    400040: RightWheel
+    400042: RightWheelBone
+    400044: root
+    400046: //RootNode
+    400048: Turret
+    400050: 0C2D0CFF00.001
+    400052: 0F2D0FFF00.001
+    400054: LeftTrack
+    400056: RightTrack
+    2300000: 062D06FF00
+    2300002: 092D09FF00
+    2300004: 0C2D0CFF00
+    2300006: 0F2D0FFF00
+    2300008: 122D12FF00
+    2300010: 152D15FF00
+    2300012: 182D18FF00
+    2300014: 1B2D1BFF00
+    2300016: 1E2D1EFF00
+    2300018: 212D21FF00
+    2300020: 242D24FF00
+    2300022: 272D27FF00
+    2300024: 2A2D2AFF00
+    2300026: 2D2D2DFF00
+    2300028: Gun
+    2300030: MainBody
+    2300032: root
+    2300034: Turret
+    2300036: 0C2D0CFF00.001
+    2300038: 0F2D0FFF00.001
+    2300040: LeftTrack
+    2300042: RightTrack
+    3300000: 062D06FF00
+    3300002: 092D09FF00
+    3300004: 0C2D0CFF00
+    3300006: 0F2D0FFF00
+    3300008: 122D12FF00
+    3300010: 152D15FF00
+    3300012: 182D18FF00
+    3300014: 1B2D1BFF00
+    3300016: 1E2D1EFF00
+    3300018: 212D21FF00
+    3300020: 242D24FF00
+    3300022: 272D27FF00
+    3300024: 2A2D2AFF00
+    3300026: 2D2D2DFF00
+    3300028: Gun
+    3300030: MainBody
+    3300032: root
+    3300034: Turret
+    3300036: 0C2D0CFF00.001
+    3300038: 0F2D0FFF00.001
+    3300040: LeftTrack
+    3300042: RightTrack
+    4300000: 092D09FF00
+    4300002: 062D06FF00
+    4300004: 1E2D1EFF00
+    4300006: Turret
+    4300008: Gun
+    4300010: root
+    4300012: MainBody
+    4300014: 0C2D0CFF00.001
+    4300016: 0F2D0FFF00.001
+    4300018: 0F2D0FFF00
+    4300020: 0C2D0CFF00
+    4300022: 1B2D1BFF00
+    4300024: 182D18FF00
+    4300026: 152D15FF00
+    4300028: 122D12FF00
+    4300030: 2D2D2DFF00
+    4300032: 2A2D2AFF00
+    4300034: 272D27FF00
+    4300036: 242D24FF00
+    4300038: 212D21FF00
+    4300040: LeftTrack
+    4300042: RightTrack
+    7400000: RightUpperWheel|002|Take 001|BaseLayer
+    7400002: RightUpperWheel|002|Take 001|BaseLayer.001
+    7400004: RightUpperWheel|Fanbu|Take 001|BaseLayer
+    7400006: RightUpperWheel|Fanbu|Take 001|BaseLayer.001
+    7400008: RightUpperWheel|LeftUpperWheel|Take 001|BaseLayer
+    7400010: RightUpperWheel|LeftUpperWheel|Take 001|BaseLayer.001
+    7400012: RightUpperWheel|LeftWheelBone|Take 001|BaseLayer
+    7400014: RightUpperWheel|LeftWheelBone|Take 001|BaseLayer.001
+    7400016: RightUpperWheel|LeftWheel|Take 001|BaseLayer
+    7400018: RightUpperWheel|LeftWheel|Take 001|BaseLayer.001
+    7400020: RightUpperWheel|RightUpperWheel|Take 001|BaseLayer
+    7400022: RightUpperWheel|RightUpperWheel|Take 001|BaseLayer.001
+    7400024: RightUpperWheel|RightWheelBone|Take 001|BaseLayer
+    7400026: RightUpperWheel|RightWheelBone|Take 001|BaseLayer.001
+    7400028: RightUpperWheel|RightWheel|Take 001|BaseLayer
+    7400030: RightUpperWheel|RightWheel|Take 001|BaseLayer.001
+    7400032: LeftUpperWheel|002|Take 001|BaseLayer
+    7400034: LeftUpperWheel|002|Take 001|BaseLayer.001
+    7400036: LeftUpperWheel|Fanbu|Take 001|BaseLayer
+    7400038: LeftUpperWheel|Fanbu|Take 001|BaseLayer.001
+    7400040: LeftUpperWheel|LeftUpperWheel|Take 001|BaseLayer
+    7400042: LeftUpperWheel|LeftUpperWheel|Take 001|BaseLayer.001
+    7400044: LeftUpperWheel|LeftWheelBone|Take 001|BaseLayer
+    7400046: LeftUpperWheel|LeftWheelBone|Take 001|BaseLayer.001
+    7400048: LeftUpperWheel|LeftWheel|Take 001|BaseLayer
+    7400050: LeftUpperWheel|LeftWheel|Take 001|BaseLayer.001
+    7400052: LeftUpperWheel|RightUpperWheel|Take 001|BaseLayer
+    7400054: LeftUpperWheel|RightUpperWheel|Take 001|BaseLayer.001
+    7400056: LeftUpperWheel|RightWheelBone|Take 001|BaseLayer
+    7400058: LeftUpperWheel|RightWheelBone|Take 001|BaseLayer.001
+    7400060: LeftUpperWheel|RightWheel|Take 001|BaseLayer
+    7400062: LeftUpperWheel|RightWheel|Take 001|BaseLayer.001
+    7400064: LeftWheelBone|002|Take 001|BaseLayer
+    7400066: LeftWheelBone|002|Take 001|BaseLayer.001
+    7400068: LeftWheelBone|Fanbu|Take 001|BaseLayer
+    7400070: LeftWheelBone|Fanbu|Take 001|BaseLayer.001
+    7400072: LeftWheelBone|LeftUpperWheel|Take 001|BaseLayer
+    7400074: LeftWheelBone|LeftUpperWheel|Take 001|BaseLayer.001
+    7400076: LeftWheelBone|LeftWheelBone|Take 001|BaseLayer
+    7400078: LeftWheelBone|LeftWheelBone|Take 001|BaseLayer.001
+    7400080: LeftWheelBone|LeftWheel|Take 001|BaseLayer
+    7400082: LeftWheelBone|LeftWheel|Take 001|BaseLayer.001
+    7400084: LeftWheelBone|RightUpperWheel|Take 001|BaseLayer
+    7400086: LeftWheelBone|RightUpperWheel|Take 001|BaseLayer.001
+    7400088: LeftWheelBone|RightWheelBone|Take 001|BaseLayer
+    7400090: LeftWheelBone|RightWheelBone|Take 001|BaseLayer.001
+    7400092: LeftWheelBone|RightWheel|Take 001|BaseLayer
+    7400094: LeftWheelBone|RightWheel|Take 001|BaseLayer.001
+    7400096: RightWheelBone|002|Take 001|BaseLayer
+    7400098: RightWheelBone|002|Take 001|BaseLayer.001
+    7400100: RightWheelBone|Fanbu|Take 001|BaseLayer
+    7400102: RightWheelBone|Fanbu|Take 001|BaseLayer.001
+    7400104: RightWheelBone|LeftUpperWheel|Take 001|BaseLayer
+    7400106: RightWheelBone|LeftUpperWheel|Take 001|BaseLayer.001
+    7400108: RightWheelBone|LeftWheelBone|Take 001|BaseLayer
+    7400110: RightWheelBone|LeftWheelBone|Take 001|BaseLayer.001
+    7400112: RightWheelBone|LeftWheel|Take 001|BaseLayer
+    7400114: RightWheelBone|LeftWheel|Take 001|BaseLayer.001
+    7400116: RightWheelBone|RightUpperWheel|Take 001|BaseLayer
+    7400118: RightWheelBone|RightUpperWheel|Take 001|BaseLayer.001
+    7400120: RightWheelBone|RightWheelBone|Take 001|BaseLayer
+    7400122: RightWheelBone|RightWheelBone|Take 001|BaseLayer.001
+    7400124: RightWheelBone|RightWheel|Take 001|BaseLayer
+    7400126: RightWheelBone|RightWheel|Take 001|BaseLayer.001
+    7400128: RightWheel|002|Take 001|BaseLayer
+    7400130: RightWheel|002|Take 001|BaseLayer.001
+    7400132: RightWheel|Fanbu|Take 001|BaseLayer
+    7400134: RightWheel|Fanbu|Take 001|BaseLayer.001
+    7400136: RightWheel|LeftUpperWheel|Take 001|BaseLayer
+    7400138: RightWheel|LeftUpperWheel|Take 001|BaseLayer.001
+    7400140: RightWheel|LeftWheelBone|Take 001|BaseLayer
+    7400142: RightWheel|LeftWheelBone|Take 001|BaseLayer.001
+    7400144: RightWheel|LeftWheel|Take 001|BaseLayer
+    7400146: RightWheel|LeftWheel|Take 001|BaseLayer.001
+    7400148: RightWheel|RightUpperWheel|Take 001|BaseLayer
+    7400150: RightWheel|RightUpperWheel|Take 001|BaseLayer.001
+    7400152: RightWheel|RightWheelBone|Take 001|BaseLayer
+    7400154: RightWheel|RightWheelBone|Take 001|BaseLayer.001
+    7400156: RightWheel|RightWheel|Take 001|BaseLayer
+    7400158: RightWheel|RightWheel|Take 001|BaseLayer.001
+    7400160: LeftWheel|002|Take 001|BaseLayer
+    7400162: LeftWheel|002|Take 001|BaseLayer.001
+    7400164: LeftWheel|Fanbu|Take 001|BaseLayer
+    7400166: LeftWheel|Fanbu|Take 001|BaseLayer.001
+    7400168: LeftWheel|LeftUpperWheel|Take 001|BaseLayer
+    7400170: LeftWheel|LeftUpperWheel|Take 001|BaseLayer.001
+    7400172: LeftWheel|LeftWheelBone|Take 001|BaseLayer
+    7400174: LeftWheel|LeftWheelBone|Take 001|BaseLayer.001
+    7400176: LeftWheel|LeftWheel|Take 001|BaseLayer
+    7400178: LeftWheel|LeftWheel|Take 001|BaseLayer.001
+    7400180: LeftWheel|RightUpperWheel|Take 001|BaseLayer
+    7400182: LeftWheel|RightUpperWheel|Take 001|BaseLayer.001
+    7400184: LeftWheel|RightWheelBone|Take 001|BaseLayer
+    7400186: LeftWheel|RightWheelBone|Take 001|BaseLayer.001
+    7400188: LeftWheel|RightWheel|Take 001|BaseLayer
+    7400190: LeftWheel|RightWheel|Take 001|BaseLayer.001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

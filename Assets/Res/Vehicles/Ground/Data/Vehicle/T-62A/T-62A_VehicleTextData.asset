@@ -25,7 +25,6 @@ MonoBehaviour:
     Mass: 3980
     Drag: 0.2
     AirDrag: 0.2
-    TrackData: {fileID: 11400000, guid: 340a4b83781184e788d43a9bdf3da7a0, type: 2}
     HAconfigSetting:
       rotateSpeed:
         serializedVersion: 2
@@ -104,7 +103,7 @@ MonoBehaviour:
       type: 2}
   TFParameter:
     ReloadTime: 6.6
-    FireRecoil: 250
+    FireRecoil: 320
     AmmoCount: 50
     HasMachineGun: 0
     bulletType: {fileID: 106298, guid: 47992cb074ed7fc48b97cf18c55d6d59, type: 2}

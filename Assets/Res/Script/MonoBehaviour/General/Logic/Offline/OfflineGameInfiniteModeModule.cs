@@ -107,9 +107,19 @@ public class OfflineGameInfiniteModeModule : MonoBehaviour {
     }
 
     private void CreateBot(string _vehicle,PunTeams.Team _botTeam) {
-        GameObject[] TeamBStartPoints = GameObject.FindGameObjectsWithTag("TeamBStartPoint");
+        GameObject[] teamStartPoint = null;
+
+        switch(_botTeam){
+            case PunTeams.Team.red:
+                teamStartPoint = GameObject.FindGameObjectsWithTag("TeamAStartPoint");
+                break;
+
+            case PunTeams.Team.blue:
+                teamStartPoint = GameObject.FindGameObjectsWithTag("TeamBStartPoint");
+                break;
+        }
         Vector3 airplaneOffsetHeight;
-        Transform StartPoint = respawnPointModule.RandomStartPoint(TeamBStartPoints, false, out airplaneOffsetHeight);
+        Transform StartPoint = respawnPointModule.RandomStartPoint(teamStartPoint, false, out airplaneOffsetHeight);
 
         TankInitSystem vehicle = new GameObject("Vehicle", typeof(TankInitSystem)).GetComponent<TankInitSystem>();
         vehicle.VehicleName = _vehicle;

@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: d8ea3bbfa979549dfaaeb3e8c6d24a8f
+timeCreated: 1516259463
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: HitBox__01
+    100004: HitBox__02
+    100006: HitBox__03
+    100008: HitBox__04
+    100010: HitBox__05
+    100012: HitBox__06
+    100014: HitBox__07
+    100016: HitBox__08
+    100018: HitBox__09
+    100020: HitBox__10
+    100022: HitBox__11
+    100024: HitBox__12
+    100026: HitBox__13
+    100028: HitBox__14
+    100030: HitBox__15
+    400000: //RootNode
+    400002: HitBox__01
+    400004: HitBox__02
+    400006: HitBox__03
+    400008: HitBox__04
+    400010: HitBox__05
+    400012: HitBox__06
+    400014: HitBox__07
+    400016: HitBox__08
+    400018: HitBox__09
+    400020: HitBox__10
+    400022: HitBox__11
+    400024: HitBox__12
+    400026: HitBox__13
+    400028: HitBox__14
+    400030: HitBox__15
+    2300000: HitBox__01
+    2300002: HitBox__02
+    2300004: HitBox__03
+    2300006: HitBox__04
+    2300008: HitBox__05
+    2300010: HitBox__06
+    2300012: HitBox__07
+    2300014: HitBox__08
+    2300016: HitBox__09
+    2300018: HitBox__10
+    2300020: HitBox__11
+    2300022: HitBox__12
+    2300024: HitBox__13
+    2300026: HitBox__14
+    2300028: HitBox__15
+    3300000: HitBox__01
+    3300002: HitBox__02
+    3300004: HitBox__03
+    3300006: HitBox__04
+    3300008: HitBox__05
+    3300010: HitBox__06
+    3300012: HitBox__07
+    3300014: HitBox__08
+    3300016: HitBox__09
+    3300018: HitBox__10
+    3300020: HitBox__11
+    3300022: HitBox__12
+    3300024: HitBox__13
+    3300026: HitBox__14
+    3300028: HitBox__15
+    4300000: HitBox__04
+    4300002: HitBox__05
+    4300004: HitBox__06
+    4300006: HitBox__07
+    4300008: HitBox__08
+    4300010: HitBox__09
+    4300012: HitBox__01
+    4300014: HitBox__13
+    4300016: HitBox__10
+    4300018: HitBox__12
+    4300020: HitBox__14
+    4300022: HitBox__11
+    4300024: HitBox__03
+    4300026: HitBox__02
+    4300028: HitBox__15
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

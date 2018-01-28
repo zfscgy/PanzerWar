@@ -18,4 +18,7 @@ public class TankFireParameter
 	public TankFire.FireState fireState = TankFire.FireState.Simple;
 
 	public TankFire.AdvanceFireClass advanceFireClass;
+
+    [System.NonSerialized]
+    public Transform recoilTransform;
 }

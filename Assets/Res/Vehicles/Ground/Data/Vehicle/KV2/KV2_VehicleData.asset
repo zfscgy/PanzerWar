@@ -37,7 +37,7 @@ MonoBehaviour:
       localPosition: {x: 0, y: 0, z: 0}
       localEulerAngle: {x: 0, y: 0, z: 0}
     FireForceFeedbackPoint:
-      localPosition: {x: 0, y: 2.62, z: 0}
+      localPosition: {x: 0, y: -0.04, z: -0.956}
       localEulerAngle: {x: -0, y: 0, z: 0}
     CenterOfGravity:
       localPosition: {x: 0, y: 2.11, z: 0.37}

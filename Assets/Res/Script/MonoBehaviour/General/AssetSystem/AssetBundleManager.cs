@@ -336,7 +336,7 @@ public class AssetBundleManager:MonoBehaviour{
         string path = "";
         switch (Application.platform) {
             case RuntimePlatform.Android:
-                path = "file://" + Application.persistentDataPath +"/";
+                path = "jar:file://" + Application.dataPath + "!/assets/TWRPackages/";
                 break;
             case RuntimePlatform.WindowsPlayer:
                 path = "file://" + Application.streamingAssetsPath + "/TWRPackages/";

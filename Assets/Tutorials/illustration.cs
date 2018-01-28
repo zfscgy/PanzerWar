@@ -7,7 +7,7 @@ public class illustration : MonoBehaviour {
         GameObject newVehicle = new GameObject("Vehicle");
         GameDataManager.OfflineMode = true;
         TankInitSystem initSystem = newVehicle.AddComponent<TankInitSystem>();
-        initSystem.VehicleName = "T-44";
+        initSystem.VehicleName = "FT_17";
         initSystem._InstanceNetType = InstanceNetType.GameNetWorkOffline;
         initSystem.BulletCountList = new int[3]{
             35,15,5

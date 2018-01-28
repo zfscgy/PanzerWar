@@ -64,10 +64,7 @@ namespace ShanghaiWindy {
 
                     AllCurrentAssetGUID.Add(AssetPathToGUID);
 
-                    if (PlayerPrefs.GetString(AssetPathToGUID) == assetImporter.assetTimeStamp.ToString()){
-                        Debug.Log("Pass");
-                        continue;
-                    }
+
 
                     PlayerPrefs.SetString(AssetPathToGUID,assetImporter.assetTimeStamp.ToString());
 

@@ -6,22 +6,19 @@ using UnityEditor.SceneManagement;
 using System.Reflection;
 using System.Linq;
 
-[CustomEditor (typeof(VehicleData))]
+[CustomEditor(typeof(VehicleData))]
 
-public class VehicleDataEditor : EditorWindowBase
-{
-	VehicleData vehicleData;
+public class VehicleDataEditor : EditorWindowBase {
+    VehicleData vehicleData;
 
-	public override void Awake ()
-	{
-		base.Awake ();
-		EditorHeadline = "ShanghaiWindy Ground Vehicle Manager";
-	}
+    public override void Awake() {
+        base.Awake();
+        EditorHeadline = "ShanghaiWindy Ground Vehicle Manager";
+    }
 
-	public override void OnSelectionChanged ()
-	{
-		base.OnSelectionChanged ();
-	}
+    public override void OnSelectionChanged() {
+        base.OnSelectionChanged();
+    }
 
     public override void ShortCut() {
         base.ShortCut();
@@ -49,241 +46,245 @@ public class VehicleDataEditor : EditorWindowBase
         }
     }
 
-	public override void OnInspectorGUI ()
-	{
-		vehicleData = (VehicleData)target;
+    public override void OnInspectorGUI() {
+        vehicleData = (VehicleData)target;
 
 
-		BaseGUI ();
+        BaseGUI();
 
-        if(InEditingSceneObject){
+        if (InEditingSceneObject) {
             EditorGUILayout.HelpBox("Press Key [K] to save the position and rotation of the selected dump to the cache", MessageType.Error);
         }
 
-		if (GUILayout.Button ("Open Edit Mode")) {
-			LockEditor ();
-			OpenEditorScene ();
+        if (GUILayout.Button("Open Edit Mode")) {
+            LockEditor();
+            OpenEditorScene();
 
-			TankInitSystem VehicleInstance = InitTankPrefabs ();
-			//SetLOD (VehicleInstance);
-		}
-		if (GUILayout.Button ("Pack Asset")) {
-			TankInitSystem VehicleInstance = InitTankPrefabs ();
-			//SetLOD (VehicleInstance);
+            TankInitSystem VehicleInstance = InitTankPrefabs();
+            //SetLOD (VehicleInstance);
+        }
+        if (GUILayout.Button("Pack Asset")) {
+            TankInitSystem VehicleInstance = InitTankPrefabs();
+            //SetLOD (VehicleInstance);
 
-			PackAsset (VehicleInstance);
-		}
+            PackAsset(VehicleInstance);
+        }
 
-		//EditorGUILayout.TextField ("Layout number", gd.);
-		base.OnInspectorGUI ();
+        //EditorGUILayout.TextField ("Layout number", gd.);
+        base.OnInspectorGUI();
 
-		if (GUI.changed)
-			EditorUtility.SetDirty (target);
-	}
+        if (GUI.changed)
+            EditorUtility.SetDirty(target);
+    }
 
-	void OpenEditorScene ()
-	{
-		EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo ();
-		EditorSceneManager.NewScene (NewSceneSetup.DefaultGameObjects);
-	}
+    void OpenEditorScene() {
+        EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+        EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects);
+    }
 
-	TankInitSystem InitTankPrefabs ()
-	{
+    TankInitSystem InitTankPrefabs() {
+        #region Collision Detect
+        if (vehicleData.modelData.MainModel.GetComponentsInChildren<BoxCollider>().Length == 0) {
+            if (EditorUtility.DisplayDialog("Error", "Collision should be set.We will redirct you to it.", "OK,l will set it now!", "No,l will choose another one")) {
+                EditorGUIUtility.PingObject(vehicleData.modelData.MainModel.GetInstanceID());
+                OpenEditorScene();
 
-		#region Collision Detect
-		if (vehicleData.modelData.MainModel.GetComponentsInChildren<BoxCollider> ().Length == 0) {
-            if (EditorUtility.DisplayDialog ("Error", "Collision should be set.We will redirct you to it.", "OK,l will set it now!", "No,l will choose another one")) {
-				EditorGUIUtility.PingObject (vehicleData.modelData.MainModel.GetInstanceID ());
-				OpenEditorScene ();
+                GameObject EditColliderInstance = Instantiate<GameObject>(vehicleData.modelData.MainModel);
+                EditColliderInstance.name = vehicleData.modelData.MainModel.name;
 
-				GameObject EditColliderInstance = Instantiate<GameObject> (vehicleData.modelData.MainModel);
-				EditColliderInstance.name = vehicleData.modelData.MainModel.name;
+                string TempPath = System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath(vehicleData.modelData.MainModel.GetInstanceID()));
+                string PrefabStoreDir = System.IO.Directory.CreateDirectory(string.Format(TempPath + "/Collisions_{0}", vehicleData.modelData.MainModel.name)).FullName;
 
-				string TempPath = System.IO.Path.GetDirectoryName (AssetDatabase.GetAssetPath (vehicleData.modelData.MainModel.GetInstanceID ()));
-				string PrefabStoreDir = System.IO.Directory.CreateDirectory (string.Format (TempPath + "/Collisions_{0}", vehicleData.modelData.MainModel.name)).FullName;
-					
-				AssetDatabase.Refresh ();
+                AssetDatabase.Refresh();
                 return null;
-				//PrefabUtility.CreatePrefab (string.Format (PrefabStoreDir + "/{0}.prefab", vehicleData.modelData.MainModel.name),EditColliderInstance);
-			} else {
-				return null;
-			}
-		}
-		#endregion
+                //PrefabUtility.CreatePrefab (string.Format (PrefabStoreDir + "/{0}.prefab", vehicleData.modelData.MainModel.name),EditColliderInstance);
+            }
+            else {
+                return null;
+            }
+        }
+        #endregion
+        GameObject TankPrefabs = new GameObject();
+        GameObject InstanceMesh = Instantiate(vehicleData.modelData.MainModel);
 
-		#region Init
-		GameObject TankPrefabs = new GameObject ();
-		GameObject InstanceMesh = Instantiate (vehicleData.modelData.MainModel);
-		InstanceMesh.name = vehicleData.modelData.MainModel.name;
-		#endregion
+        try {
+            #region Init
+            InstanceMesh.name = vehicleData.modelData.MainModel.name;
+            #endregion
 
-		TankPrefabs.name = InstanceMesh.name + "_Pre";
+            TankPrefabs.name = InstanceMesh.name + "_Pre";
 
-		InstanceMesh.transform.parent = TankPrefabs.transform;
+            InstanceMesh.transform.parent = TankPrefabs.transform;
 
-		GameObject TankTransform = new GameObject ("TankTransform");
-		TankTransform.transform.parent = InstanceMesh.transform;
+            GameObject TankTransform = new GameObject("TankTransform");
+            TankTransform.transform.parent = InstanceMesh.transform;
 
-		Transform RightWheel, LeftWheel, RightUpperWheels, LeftUpperWheels, Turret, Gun, GunDym;
-		#region Find Dumps
-		RightWheel = InstanceMesh.transform.Find ("RightWheel");		
-		LeftWheel = InstanceMesh.transform.Find ("LeftWheel");		
-		Turret = InstanceMesh.transform.Find ("Turret");
-		Gun = Turret.transform.Find ("Gun");
-        GunDym = Gun.GetChild(0);
-
-
-        RightUpperWheels = InstanceMesh.transform.Find ("RightUpperWheel");	
-		LeftUpperWheels = InstanceMesh.transform.Find ("LeftUpperWheel");	
-		#endregion
-		RightWheel.parent = TankTransform.transform;		
-		LeftWheel.parent = TankTransform.transform;			
-		LeftUpperWheels.parent = TankTransform.transform;
-		RightUpperWheels.parent = TankTransform.transform;	
+            Transform RightWheel, LeftWheel, RightUpperWheels, LeftUpperWheels, Turret, Gun, GunDym;
+            #region Find Dumps
+            RightWheel = InstanceMesh.transform.Find("RightWheel");
+            LeftWheel = InstanceMesh.transform.Find("LeftWheel");
+            Turret = InstanceMesh.transform.Find("Turret");
+            Gun = Turret.transform.Find("Gun");
+            GunDym = Gun.GetChild(0);
 
 
-		GameObject TurretTransform = new GameObject ("TurretTransform");
-		GameObject GunTransform = new GameObject ("GunTransform");
-		GameObject GunDymTransform = new GameObject ("GunDym");
+            RightUpperWheels = InstanceMesh.transform.Find("RightUpperWheel");
+            LeftUpperWheels = InstanceMesh.transform.Find("LeftUpperWheel");
+            #endregion
+            RightWheel.parent = TankTransform.transform;
+            LeftWheel.parent = TankTransform.transform;
+            LeftUpperWheels.parent = TankTransform.transform;
+            RightUpperWheels.parent = TankTransform.transform;
 
-        VehicleComponentsReferenceManager referenceManager = InstanceMesh.AddComponent<VehicleComponentsReferenceManager>();
 
-        TurretTransform.transform.SetParent (InstanceMesh.transform);
-		TurretTransform.transform.position = Turret.transform.position;
+            GameObject TurretTransform = new GameObject("TurretTransform");
+            GameObject GunTransform = new GameObject("GunTransform");
+            GameObject GunDymTransform = new GameObject("GunDym");
 
-		GunTransform.transform.position = Gun.transform.position;
-		Turret.parent = TurretTransform.transform;
+            VehicleComponentsReferenceManager referenceManager = InstanceMesh.AddComponent<VehicleComponentsReferenceManager>();
 
-		Gun.parent = GunTransform.transform;
-		GunTransform.transform.SetParent (TurretTransform.transform);
+            TurretTransform.transform.SetParent(InstanceMesh.transform);
+            TurretTransform.transform.position = Turret.transform.position;
 
-		GunDymTransform.transform.position = GunDym.transform.position;
-		GunDymTransform.transform.SetParent (GunTransform.transform);
-		GunDym.SetParent (GunDymTransform.transform);
+            GunTransform.transform.position = Gun.transform.position;
+            Turret.parent = TurretTransform.transform;
 
-        #region Add fire animation
-        Animator FireAnimator = GunDymTransform.AddComponent<Animator> ();
-        FireAnimator.runtimeAnimatorController = vehicleData.vehicleTextData.TFParameter.GymAnimation;
+            Gun.parent = GunTransform.transform;
+            GunTransform.transform.SetParent(TurretTransform.transform);
+
+            GunDymTransform.transform.position = GunDym.transform.position;
+            GunDymTransform.transform.SetParent(GunTransform.transform);
+            GunDym.SetParent(GunDymTransform.transform);
+
+            #region Add fire animation
+            Animator FireAnimator = GunDymTransform.AddComponent<Animator>();
+            FireAnimator.runtimeAnimatorController = vehicleData.vehicleTextData.TFParameter.GymAnimation;
+            #endregion
+
+            AddDumpNode("FFPoint", GunTransform.transform, true, referenceManager);
+            AddDumpNode("EffectStart", GunTransform.transform, true, referenceManager);
+            AddDumpNode("FireForceFeedbackPoint", GunTransform.transform, true, referenceManager);
+            AddDumpNode("EngineSmoke", InstanceMesh.transform, true, referenceManager);
+            AddDumpNode("EngineSound", InstanceMesh.transform, true, referenceManager);
+            AddDumpNode("MainCameraFollowTarget", InstanceMesh.transform, true, referenceManager);
+            AddDumpNode("MainCameraGunner", GunTransform.transform, true, referenceManager);
+            AddDumpNode("MachineGunFFPoint", TurretTransform.transform, true, referenceManager);
+            AddDumpNode("CenterOfGravity", InstanceMesh.transform, true, referenceManager);
+
+            referenceManager.LeftTrack = InstanceMesh.transform.Find("LeftTrack").gameObject;
+            referenceManager.RightTrack = InstanceMesh.transform.Find("RightTrack").gameObject;
+
+            GameObject HitBoxInstance = Instantiate<GameObject>(vehicleData.modelData.HitBox.HitBoxPrefab);
+            HitBoxInstance.transform.Find("Main").name = "MainHitBox";
+            HitBoxInstance.transform.Find("MainHitBox").SetParent(InstanceMesh.transform);
+
+            HitBoxInstance.transform.Find("Turret").name = "TurretHitBox";
+            HitBoxInstance.transform.Find("TurretHitBox").SetParent(TurretTransform.transform);
+
+            HitBoxInstance.transform.Find("Gun").name = "GunHitBox";
+            HitBoxInstance.transform.Find("GunHitBox").SetParent(GunTransform.transform);
+
+            HitBoxInstance.transform.Find("Dym").name = "DymHitBox";
+            HitBoxInstance.transform.Find("DymHitBox").SetParent(GunDymTransform.transform);
+
+            DestroyImmediate(HitBoxInstance);
+            Restore(LeftWheel.GetComponentsInChildren<Transform>());
+            Restore(RightWheel.GetComponentsInChildren<Transform>());
+
+            Restore(LeftUpperWheels.GetComponentsInChildren<Transform>());
+            Restore(RightUpperWheels.GetComponentsInChildren<Transform>());
+
+            new GameObject("MainCameraTarget").transform.SetParent(TurretTransform.transform);
+
+            TankInitSystem initySystem = TankPrefabs.AddComponent<TankInitSystem>();
+            initySystem.PSParameter = vehicleData.vehicleTextData.PSParameter;
+            initySystem.TFParameter = vehicleData.vehicleTextData.TFParameter;
+            initySystem.MTParameter = vehicleData.vehicleTextData.MTParameter;
+            initySystem.PTCParameter = vehicleData.vehicleTextData.PTCParameter;
+
+            return initySystem;
+        }
+        catch (System.Exception exception) {
+            EditorUtility.DisplayDialog("Exception", exception.Message+"\n"+exception.StackTrace, "OK");
+            DestroyImmediate(TankPrefabs);
+            throw exception;
+            return null;
+        }
+
+    }
+
+    public Transform[] Restore(Transform[] t) {
+        Transform[] ReturnTransform = new Transform[t.Length - 1];
+        int i;
+        for (i = 0; i < t.Length; i++) {
+            if (i != 0)
+                ReturnTransform[i - 1] = t[i];
+        }
+        Transform temp = null;
+        for (i = 0; i < ReturnTransform.Length - 1; i++) {
+            for (int j = i + 1; j < ReturnTransform.Length; j++) {
+                if (ReturnTransform[i].localPosition.y > ReturnTransform[j].localPosition.y) {
+                    temp = ReturnTransform[i];
+                    ReturnTransform[i] = ReturnTransform[j];
+                    ReturnTransform[j] = temp;
+                }
+                ReturnTransform[i].name = "w" + i.ToString();
+                ReturnTransform[i].SetAsLastSibling();
+            }
+
+        }
+        ReturnTransform[ReturnTransform.Length - 1].name = "w" + (ReturnTransform.Length - 1).ToString();
+        ReturnTransform[ReturnTransform.Length - 1].SetAsLastSibling();
+
+        return ReturnTransform;
+    }
+
+    void PackAsset(TankInitSystem tankInitSystem) {
+        string CurrentAssetName = tankInitSystem.transform.GetChild(0).name;
+
+        string Path = "Assets/res/Cooked/" + CurrentAssetName.ToLower();
+        //
+
+
+        GameObject Prefab = tankInitSystem.transform.GetChild(0).gameObject;
+
+        #region 游戏内模型 预制体处理
+        GameObject Origin = PrefabUtility.CreatePrefab(Path + "_Pre.prefab", Prefab); // 要打包的物体
+
+
+
+        #region 客户端打包文件
+        AssetImporter assetImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(Origin));
+        assetImporter.assetBundleName = CurrentAssetName + "_Pre";
+        assetImporter.assetBundleVariant = "clientextramesh";
         #endregion
 
-        AddDumpNode("FFPoint", GunTransform.transform, true, referenceManager);
-        AddDumpNode("EffectStart", GunTransform.transform, true, referenceManager);
-        AddDumpNode("FireForceFeedbackPoint", InstanceMesh.transform, true, referenceManager);
-        AddDumpNode("EngineSmoke", InstanceMesh.transform, true, referenceManager);
-        AddDumpNode("EngineSound", InstanceMesh.transform, true, referenceManager);
-        AddDumpNode("MainCameraFollowTarget", InstanceMesh.transform, true, referenceManager);
-        AddDumpNode("MainCameraGunner", GunTransform.transform, true, referenceManager);
-        AddDumpNode("MachineGunFFPoint", TurretTransform.transform, true, referenceManager);
-        AddDumpNode("CenterOfGravity", InstanceMesh.transform, true, referenceManager);
 
-        referenceManager.LeftTrack = InstanceMesh.transform.Find("LeftTrack").gameObject;
-        referenceManager.RightTrack = InstanceMesh.transform.Find("RightTrack").gameObject;
+        ProjectWindowUtil.ShowCreatedAsset(tankInitSystem.gameObject);
+        #endregion
 
-        GameObject HitBoxInstance = Instantiate<GameObject> (vehicleData.modelData.HitBox.HitBoxPrefab);
-		HitBoxInstance.transform.Find ("Main").name = "MainHitBox";
-		HitBoxInstance.transform.Find ("MainHitBox").SetParent (InstanceMesh.transform);
+        #region 服务器资源处理
 
-		HitBoxInstance.transform.Find ("Turret").name = "TurretHitBox";
-		HitBoxInstance.transform.Find ("TurretHitBox").SetParent (TurretTransform.transform);
-
-		HitBoxInstance.transform.Find ("Gun").name = "GunHitBox";
-		HitBoxInstance.transform.Find ("GunHitBox").SetParent (GunTransform.transform);
-
-		HitBoxInstance.transform.Find ("Dym").name = "DymHitBox";
-		HitBoxInstance.transform.Find ("DymHitBox").SetParent (GunDymTransform.transform);
-
-		DestroyImmediate (HitBoxInstance);
-		Restore (LeftWheel.GetComponentsInChildren<Transform> ());
-		Restore (RightWheel.GetComponentsInChildren<Transform> ());
-
-		Restore (LeftUpperWheels.GetComponentsInChildren<Transform> ());
-		Restore (RightUpperWheels.GetComponentsInChildren<Transform> ());
-
-		new GameObject ("MainCameraTarget").transform.SetParent (TurretTransform.transform);
-
-        TankInitSystem initySystem = TankPrefabs.AddComponent<TankInitSystem>();
-        initySystem.PSParameter = vehicleData.vehicleTextData.PSParameter;
-        initySystem.TFParameter = vehicleData.vehicleTextData.TFParameter;
-        initySystem.MTParameter = vehicleData.vehicleTextData.MTParameter;
-        initySystem.PTCParameter = vehicleData.vehicleTextData.PTCParameter;
-
-        return initySystem;
-	}
-
-	public Transform[] Restore (Transform[] t)
-	{
-		Transform[] ReturnTransform = new Transform[t.Length - 1];
-		int i;
-		for (i = 0; i < t.Length; i++) {
-			if (i != 0)
-				ReturnTransform [i - 1] = t [i];
-		}
-		Transform temp = null;
-		for (i = 0; i < ReturnTransform.Length - 1; i++) { 
-			for (int j = i + 1; j < ReturnTransform.Length; j++) { 
-				if (ReturnTransform [i].localPosition.y > ReturnTransform [j].localPosition.y) { 
-					temp = ReturnTransform [i]; 
-					ReturnTransform [i] = ReturnTransform [j]; 
-					ReturnTransform [j] = temp; 
-				} 
-				ReturnTransform [i].name = "w" + i.ToString ();
-				ReturnTransform [i].SetAsLastSibling ();
-			} 
-
-		}
-		ReturnTransform [ReturnTransform.Length - 1].name = "w" + (ReturnTransform.Length - 1).ToString ();
-		ReturnTransform [ReturnTransform.Length - 1].SetAsLastSibling ();
-
-		return ReturnTransform;
-	}
-
-	void PackAsset (TankInitSystem tankInitSystem)
-	{
-		string CurrentAssetName = tankInitSystem.transform.GetChild (0).name;
-
-		string Path = "Assets/res/Cooked/" + CurrentAssetName.ToLower ();
-//
+        foreach (MeshRenderer meshRenderer in Prefab.GetComponentsInChildren<MeshRenderer>()) {
+            DestroyImmediate(meshRenderer);
+        }
+        foreach (MeshFilter mesh in Prefab.GetComponentsInChildren<MeshFilter>()) {
+            DestroyImmediate(mesh);
+        }
 
 
-		GameObject Prefab = tankInitSystem.transform.GetChild (0).gameObject;
+        #region 服务器打包文件
+        GameObject DelicateAsset = PrefabUtility.CreatePrefab("Assets/res/Cooked/DelicatedServer/" + CurrentAssetName.ToLower() + "_Pre" + ".prefab", Prefab);
+        assetImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(DelicateAsset));
+        assetImporter.SetAssetBundleNameAndVariant(CurrentAssetName + "_Pre", "masterextramesh");
+        #endregion
 
-		#region 游戏内模型 预制体处理
-		GameObject Origin = PrefabUtility.CreatePrefab(Path + "_Pre.prefab", Prefab); // 要打包的物体
+        #endregion
 
+        DestroyImmediate(Prefab);
+        DestroyImmediate(tankInitSystem.gameObject);
 
-
-		#region 客户端打包文件
-		AssetImporter assetImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(Origin));
-		assetImporter.assetBundleName = CurrentAssetName + "_Pre";
-		assetImporter.assetBundleVariant = "clientextramesh";
-		#endregion
-
-
-		ProjectWindowUtil.ShowCreatedAsset(tankInitSystem.gameObject);
-		#endregion
-
-		#region 服务器资源处理
-
-		foreach (MeshRenderer meshRenderer in Prefab.GetComponentsInChildren<MeshRenderer>()) {
-			DestroyImmediate(meshRenderer);
-		}
-		foreach (MeshFilter mesh in Prefab.GetComponentsInChildren<MeshFilter>()) {
-			DestroyImmediate(mesh);
-		}
-
-
-		#region 服务器打包文件
-		GameObject DelicateAsset = PrefabUtility.CreatePrefab("Assets/res/Cooked/DelicatedServer/" + CurrentAssetName.ToLower() + "_Pre" + ".prefab", Prefab);
-		assetImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(DelicateAsset));
-		assetImporter.SetAssetBundleNameAndVariant(CurrentAssetName + "_Pre", "masterextramesh");
-		#endregion
-
-		#endregion
-
-		DestroyImmediate(Prefab);
-		DestroyImmediate(tankInitSystem.gameObject);
-
-	}
+    }
     void SetLOD(TankInitSystem root) {
         Transform vehicleComponentRoot = root.transform.GetChild(0); //主要组件位置
 

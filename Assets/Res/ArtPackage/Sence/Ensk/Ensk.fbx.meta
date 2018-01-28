@@ -1,0 +1,720 @@
+fileFormatVersion: 2
+guid: 74d216d1664cf44dc99bfad86613a0bd
+timeCreated: 1514792367
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Chemins de fer Abidjan-Niger
+    100002: Chemins de fer Abidjan-Niger.001
+    100004: element
+    100006: element.001
+    100008: element.002
+    100010: element.003
+    100012: element.004
+    100014: element.005
+    100016: element.006
+    100018: element.007
+    100020: element.008
+    100022: element.009
+    100024: element.010
+    100026: element.011
+    100028: element.012
+    100030: element.013
+    100032: element.014
+    100034: element.015
+    100036: element.016
+    100038: element.017
+    100040: element.018
+    100042: element.019
+    100044: element.020
+    100046: element.021
+    100048: element.022
+    100050: element.023
+    100052: element.024
+    100054: element.025
+    100056: element.026
+    100058: element.027
+    100060: element.028
+    100062: element.029
+    100064: element.030
+    100066: element.031
+    100068: element.032
+    100070: element.033
+    100072: element.034
+    100074: element.035
+    100076: element.036
+    100078: element.037
+    100080: element.038
+    100082: element.039
+    100084: element.040
+    100086: element.041
+    100088: element.042
+    100090: element.043
+    100092: element.044
+    100094: element.045
+    100096: element.046
+    100098: element.047
+    100100: element.048
+    100102: element.049
+    100104: element.050
+    100106: element.051
+    100108: element.052
+    100110: element.053
+    100112: element.054
+    100114: element.055
+    100116: element.056
+    100118: element.057
+    100120: element.058
+    100122: element.059
+    100124: element.060
+    100126: element.061
+    100128: element.062
+    100130: element.063
+    100132: element.064
+    100134: element.065
+    100136: element.066
+    100138: element.067
+    100140: element.068
+    100142: element.069
+    100144: element.070
+    100146: element.071
+    100148: element.072
+    100150: element.073
+    100152: element.074
+    100154: element.075
+    100156: element.076
+    100158: element.077
+    100160: element.078
+    100162: element.079
+    100164: element.080
+    100166: element.081
+    100168: element.082
+    100170: element.083
+    100172: element.084
+    100174: element.085
+    100176: element.086
+    100178: element.087
+    100180: element.088
+    100182: element.089
+    100184: element.090
+    100186: element.091
+    100188: element.092
+    100190: element.093
+    100192: element.094
+    100194: element.095
+    100196: element.096
+    100198: //RootNode
+    100200: Gare de Koudougou
+    100202: map_7.osm_buildings
+    100204: map_7.osm_highways
+    100206: map_7.osm_railways
+    100208: Pharmacie FANG GNORE
+    100210: Route de Ouagadougou
+    100212: Route de Ouagadougou.001
+    100214: Rue de Zurich
+    100216: Rue de Zurich.001
+    400000: Chemins de fer Abidjan-Niger
+    400002: Chemins de fer Abidjan-Niger.001
+    400004: element
+    400006: element.001
+    400008: element.002
+    400010: element.003
+    400012: element.004
+    400014: element.005
+    400016: element.006
+    400018: element.007
+    400020: element.008
+    400022: element.009
+    400024: element.010
+    400026: element.011
+    400028: element.012
+    400030: element.013
+    400032: element.014
+    400034: element.015
+    400036: element.016
+    400038: element.017
+    400040: element.018
+    400042: element.019
+    400044: element.020
+    400046: element.021
+    400048: element.022
+    400050: element.023
+    400052: element.024
+    400054: element.025
+    400056: element.026
+    400058: element.027
+    400060: element.028
+    400062: element.029
+    400064: element.030
+    400066: element.031
+    400068: element.032
+    400070: element.033
+    400072: element.034
+    400074: element.035
+    400076: element.036
+    400078: element.037
+    400080: element.038
+    400082: element.039
+    400084: element.040
+    400086: element.041
+    400088: element.042
+    400090: element.043
+    400092: element.044
+    400094: element.045
+    400096: element.046
+    400098: element.047
+    400100: element.048
+    400102: element.049
+    400104: element.050
+    400106: element.051
+    400108: element.052
+    400110: element.053
+    400112: element.054
+    400114: element.055
+    400116: element.056
+    400118: element.057
+    400120: element.058
+    400122: element.059
+    400124: element.060
+    400126: element.061
+    400128: element.062
+    400130: element.063
+    400132: element.064
+    400134: element.065
+    400136: element.066
+    400138: element.067
+    400140: element.068
+    400142: element.069
+    400144: element.070
+    400146: element.071
+    400148: element.072
+    400150: element.073
+    400152: element.074
+    400154: element.075
+    400156: element.076
+    400158: element.077
+    400160: element.078
+    400162: element.079
+    400164: element.080
+    400166: element.081
+    400168: element.082
+    400170: element.083
+    400172: element.084
+    400174: element.085
+    400176: element.086
+    400178: element.087
+    400180: element.088
+    400182: element.089
+    400184: element.090
+    400186: element.091
+    400188: element.092
+    400190: element.093
+    400192: element.094
+    400194: element.095
+    400196: element.096
+    400198: //RootNode
+    400200: Gare de Koudougou
+    400202: map_7.osm_buildings
+    400204: map_7.osm_highways
+    400206: map_7.osm_railways
+    400208: Pharmacie FANG GNORE
+    400210: Route de Ouagadougou
+    400212: Route de Ouagadougou.001
+    400214: Rue de Zurich
+    400216: Rue de Zurich.001
+    2300000: Chemins de fer Abidjan-Niger
+    2300002: Chemins de fer Abidjan-Niger.001
+    2300004: element
+    2300006: element.001
+    2300008: element.002
+    2300010: element.003
+    2300012: element.004
+    2300014: element.005
+    2300016: element.006
+    2300018: element.007
+    2300020: element.008
+    2300022: element.009
+    2300024: element.010
+    2300026: element.011
+    2300028: element.012
+    2300030: element.013
+    2300032: element.014
+    2300034: element.015
+    2300036: element.016
+    2300038: element.017
+    2300040: element.018
+    2300042: element.019
+    2300044: element.020
+    2300046: element.021
+    2300048: element.022
+    2300050: element.023
+    2300052: element.024
+    2300054: element.025
+    2300056: element.026
+    2300058: element.027
+    2300060: element.028
+    2300062: element.029
+    2300064: element.030
+    2300066: element.031
+    2300068: element.032
+    2300070: element.033
+    2300072: element.034
+    2300074: element.035
+    2300076: element.036
+    2300078: element.037
+    2300080: element.038
+    2300082: element.039
+    2300084: element.040
+    2300086: element.041
+    2300088: element.042
+    2300090: element.043
+    2300092: element.044
+    2300094: element.045
+    2300096: element.046
+    2300098: element.047
+    2300100: element.048
+    2300102: element.049
+    2300104: element.050
+    2300106: element.051
+    2300108: element.052
+    2300110: element.053
+    2300112: element.054
+    2300114: element.055
+    2300116: element.056
+    2300118: element.057
+    2300120: element.058
+    2300122: element.059
+    2300124: element.060
+    2300126: element.061
+    2300128: element.062
+    2300130: element.063
+    2300132: element.064
+    2300134: element.065
+    2300136: element.066
+    2300138: element.067
+    2300140: element.068
+    2300142: element.069
+    2300144: element.070
+    2300146: element.071
+    2300148: element.072
+    2300150: element.073
+    2300152: element.074
+    2300154: element.075
+    2300156: element.076
+    2300158: element.077
+    2300160: element.078
+    2300162: element.079
+    2300164: element.080
+    2300166: element.081
+    2300168: element.082
+    2300170: element.083
+    2300172: element.084
+    2300174: element.085
+    2300176: element.086
+    2300178: element.087
+    2300180: element.088
+    2300182: element.089
+    2300184: element.090
+    2300186: element.091
+    2300188: element.092
+    2300190: element.093
+    2300192: element.094
+    2300194: element.095
+    2300196: element.096
+    2300198: Gare de Koudougou
+    2300200: Pharmacie FANG GNORE
+    2300202: Route de Ouagadougou
+    2300204: Route de Ouagadougou.001
+    2300206: Rue de Zurich
+    2300208: Rue de Zurich.001
+    3300000: Chemins de fer Abidjan-Niger
+    3300002: Chemins de fer Abidjan-Niger.001
+    3300004: element
+    3300006: element.001
+    3300008: element.002
+    3300010: element.003
+    3300012: element.004
+    3300014: element.005
+    3300016: element.006
+    3300018: element.007
+    3300020: element.008
+    3300022: element.009
+    3300024: element.010
+    3300026: element.011
+    3300028: element.012
+    3300030: element.013
+    3300032: element.014
+    3300034: element.015
+    3300036: element.016
+    3300038: element.017
+    3300040: element.018
+    3300042: element.019
+    3300044: element.020
+    3300046: element.021
+    3300048: element.022
+    3300050: element.023
+    3300052: element.024
+    3300054: element.025
+    3300056: element.026
+    3300058: element.027
+    3300060: element.028
+    3300062: element.029
+    3300064: element.030
+    3300066: element.031
+    3300068: element.032
+    3300070: element.033
+    3300072: element.034
+    3300074: element.035
+    3300076: element.036
+    3300078: element.037
+    3300080: element.038
+    3300082: element.039
+    3300084: element.040
+    3300086: element.041
+    3300088: element.042
+    3300090: element.043
+    3300092: element.044
+    3300094: element.045
+    3300096: element.046
+    3300098: element.047
+    3300100: element.048
+    3300102: element.049
+    3300104: element.050
+    3300106: element.051
+    3300108: element.052
+    3300110: element.053
+    3300112: element.054
+    3300114: element.055
+    3300116: element.056
+    3300118: element.057
+    3300120: element.058
+    3300122: element.059
+    3300124: element.060
+    3300126: element.061
+    3300128: element.062
+    3300130: element.063
+    3300132: element.064
+    3300134: element.065
+    3300136: element.066
+    3300138: element.067
+    3300140: element.068
+    3300142: element.069
+    3300144: element.070
+    3300146: element.071
+    3300148: element.072
+    3300150: element.073
+    3300152: element.074
+    3300154: element.075
+    3300156: element.076
+    3300158: element.077
+    3300160: element.078
+    3300162: element.079
+    3300164: element.080
+    3300166: element.081
+    3300168: element.082
+    3300170: element.083
+    3300172: element.084
+    3300174: element.085
+    3300176: element.086
+    3300178: element.087
+    3300180: element.088
+    3300182: element.089
+    3300184: element.090
+    3300186: element.091
+    3300188: element.092
+    3300190: element.093
+    3300192: element.094
+    3300194: element.095
+    3300196: element.096
+    3300198: Gare de Koudougou
+    3300200: Pharmacie FANG GNORE
+    3300202: Route de Ouagadougou
+    3300204: Route de Ouagadougou.001
+    3300206: Rue de Zurich
+    3300208: Rue de Zurich.001
+    4300000: element.096
+    4300002: element.095
+    4300004: Rue de Zurich.001
+    4300006: element.093
+    4300008: element.091
+    4300010: Route de Ouagadougou.001
+    4300012: element.089
+    4300014: Rue de Zurich
+    4300016: Route de Ouagadougou
+    4300018: Chemins de fer Abidjan-Niger.001
+    4300020: element.094
+    4300022: element.092
+    4300024: Chemins de fer Abidjan-Niger
+    4300026: element.090
+    4300028: element.088
+    4300030: element.087
+    4300032: element.086
+    4300034: element.085
+    4300036: element.084
+    4300038: element.083
+    4300040: element.082
+    4300042: element.081
+    4300044: element.080
+    4300046: element.079
+    4300048: element.078
+    4300050: element.077
+    4300052: element.076
+    4300054: element.075
+    4300056: element.074
+    4300058: element.073
+    4300060: element.072
+    4300062: element.071
+    4300064: element.070
+    4300066: element.069
+    4300068: element.068
+    4300070: element.067
+    4300072: Pharmacie FANG GNORE
+    4300074: element.066
+    4300076: element.065
+    4300078: element.064
+    4300080: element.063
+    4300082: element.062
+    4300084: element.061
+    4300086: element.060
+    4300088: element.059
+    4300090: element.058
+    4300092: element.057
+    4300094: element.056
+    4300096: element.055
+    4300098: element.054
+    4300100: element.053
+    4300102: element.052
+    4300104: element.051
+    4300106: element.050
+    4300108: element.049
+    4300110: element.048
+    4300112: element.047
+    4300114: element.046
+    4300116: element.045
+    4300118: element.044
+    4300120: element.043
+    4300122: element.042
+    4300124: element.041
+    4300126: element.040
+    4300128: element.039
+    4300130: element.038
+    4300132: element.037
+    4300134: element.036
+    4300136: element.035
+    4300138: element.034
+    4300140: element.033
+    4300142: element.032
+    4300144: element.031
+    4300146: element.030
+    4300148: element.029
+    4300150: element.028
+    4300152: element.027
+    4300154: element.026
+    4300156: element.025
+    4300158: element.024
+    4300160: element.023
+    4300162: element.022
+    4300164: element.021
+    4300166: element.020
+    4300168: element.019
+    4300170: element.018
+    4300172: element.017
+    4300174: element.016
+    4300176: element.015
+    4300178: element.014
+    4300180: element.013
+    4300182: element.012
+    4300184: element.011
+    4300186: element.010
+    4300188: element.009
+    4300190: element.008
+    4300192: element.007
+    4300194: element.006
+    4300196: element.005
+    4300198: element.004
+    4300200: element.003
+    4300202: element.002
+    4300204: Gare de Koudougou
+    4300206: element.001
+    4300208: element
+    6400000: Chemins de fer Abidjan-Niger
+    6400002: Chemins de fer Abidjan-Niger.001
+    6400004: element
+    6400006: element.001
+    6400008: element.002
+    6400010: element.003
+    6400012: element.004
+    6400014: element.005
+    6400016: element.006
+    6400018: element.007
+    6400020: element.008
+    6400022: element.009
+    6400024: element.010
+    6400026: element.011
+    6400028: element.012
+    6400030: element.013
+    6400032: element.014
+    6400034: element.015
+    6400036: element.016
+    6400038: element.017
+    6400040: element.018
+    6400042: element.019
+    6400044: element.020
+    6400046: element.021
+    6400048: element.022
+    6400050: element.023
+    6400052: element.024
+    6400054: element.025
+    6400056: element.026
+    6400058: element.027
+    6400060: element.028
+    6400062: element.029
+    6400064: element.030
+    6400066: element.031
+    6400068: element.032
+    6400070: element.033
+    6400072: element.034
+    6400074: element.035
+    6400076: element.036
+    6400078: element.037
+    6400080: element.038
+    6400082: element.039
+    6400084: element.040
+    6400086: element.041
+    6400088: element.042
+    6400090: element.043
+    6400092: element.044
+    6400094: element.045
+    6400096: element.046
+    6400098: element.047
+    6400100: element.048
+    6400102: element.049
+    6400104: element.050
+    6400106: element.051
+    6400108: element.052
+    6400110: element.053
+    6400112: element.054
+    6400114: element.055
+    6400116: element.056
+    6400118: element.057
+    6400120: element.058
+    6400122: element.059
+    6400124: element.060
+    6400126: element.061
+    6400128: element.062
+    6400130: element.063
+    6400132: element.064
+    6400134: element.065
+    6400136: element.066
+    6400138: element.067
+    6400140: element.068
+    6400142: element.069
+    6400144: element.070
+    6400146: element.071
+    6400148: element.072
+    6400150: element.073
+    6400152: element.074
+    6400154: element.075
+    6400156: element.076
+    6400158: element.077
+    6400160: element.078
+    6400162: element.079
+    6400164: element.080
+    6400166: element.081
+    6400168: element.082
+    6400170: element.083
+    6400172: element.084
+    6400174: element.085
+    6400176: element.086
+    6400178: element.087
+    6400180: element.088
+    6400182: element.089
+    6400184: element.090
+    6400186: element.091
+    6400188: element.092
+    6400190: element.093
+    6400192: element.094
+    6400194: element.095
+    6400196: element.096
+    6400198: Gare de Koudougou
+    6400200: Pharmacie FANG GNORE
+    6400202: Route de Ouagadougou
+    6400204: Route de Ouagadougou.001
+    6400206: Rue de Zurich
+    6400208: Rue de Zurich.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

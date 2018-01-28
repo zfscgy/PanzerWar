@@ -18,12 +18,12 @@ MonoBehaviour:
     CenterOfGravity: {fileID: 0}
     SideWaysFrictionExtremumFactor: 1.2
     SideWaysFrictionAsymptoteFactor: 1.2
-    MaxSpeed: 45
-    MinSpeed: -30
-    MaxAngularVelocity: 45
+    MaxSpeed: 35
+    MinSpeed: -11
+    MaxAngularVelocity: 18
     PushSpeed: 1
     BackSpeed: 1
-    Mass: 4500
+    Mass: 5285
     Drag: 0.2
     AirDrag: 0.2
     HAconfigSetting:
@@ -103,9 +103,9 @@ MonoBehaviour:
     vehicleEngineSoundData: {fileID: 11400000, guid: e091fae89921d4ac9b83f30218fb36a6,
       type: 2}
   TFParameter:
-    ReloadTime: 12
-    FireRecoil: 250
-    AmmoCount: 30
+    ReloadTime: 24
+    FireRecoil: 600
+    AmmoCount: 36
     HasMachineGun: 0
     bulletType: {fileID: 100018, guid: 75f63f780d620c44181e321ac3665aa0, type: 2}
     GymAnimation: {fileID: 0}
@@ -123,12 +123,12 @@ MonoBehaviour:
   multiTurrets: []
   MTParameter:
     maxTurretAngle: 180
-    UpMaxDegree: 35
-    DownMaxDegree: 12
-    turretDegreesPerSecond: 22
-    gunDegreesPerSecond: 16
+    UpMaxDegree: 12
+    DownMaxDegree: 5
+    turretDegreesPerSecond: 16
+    gunDegreesPerSecond: 23.63
   PSParameter:
-    Health: 600
+    Health: 860
     engineType: 1
     nationType: 1
     vehicleType: 2

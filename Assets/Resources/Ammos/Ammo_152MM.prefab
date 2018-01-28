@@ -40,35 +40,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9944fff74f899419ba82f334685067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Order: 0
-  Speed: 750
-  LifeOfAmmoEffect: 15
-  APDamage: 950
-  APPenetration: 120
-  IsReflected: 0
-  HeDamage: 1250
-  HePenetration: 110
-  ApcrPenration: 150
-  HeRange: 15
-  Caliber: 152
-  MuzzleFlashStartSize: 3
-  FireExplosionHitOnArmor: FireExplosionHitOnArmor
-  FireExplosionHitOnGround: FireExplosionHitOnGround
-  Owner: {fileID: 0}
-  FirePostion: {x: 0, y: 0, z: 0}
   bulletState: 1
   bulletType: 1
   bulletSize: 0
   ammoAudio:
     ammoFireAudio: 7
     ammoExplAudio: 0
-  MachineAmmo: 0
-  AirAmmo: 0
-  Bomb: 0
+  FireExplosionHitOnArmor: FireExplosionHitOnArmor
+  FireExplosionHitOnGround: FireExplosionHitOnGround
+  isMachineAmmo: 0
   UseGravity: 1
-  DesireEndPoint: {x: 0, y: 0, z: 0}
+  Caliber: 152
+  Speed: 525
+  APDamage: 700
+  APPenetration: 110
+  HeDamage: 1250
+  HePenetration: 65
+  ApcrPenration: 150
+  HeRange: 15
   GravityDamper: 9.8
-  FireAngle: 0
+  fireOwner: {fileID: 0}
+  fireStartPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -104,6 +104,8 @@ public class BulletScript : BulletBase {
             StartCoroutine(InitWeaponSound());
             return;
         }
+
+
         if (bulletType == BulletType.ApAmmo) {
             shellNormalizationAngle = 3;
         }

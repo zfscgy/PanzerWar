@@ -305,7 +305,7 @@ MonoBehaviour:
     isBuffer: 0
   - ObjectName: WeaponProjectile
     Object: {fileID: 100000, guid: 5db7c4c4c792a194faaa1922334a2db3, type: 2}
-    CreateCount: 50
+    CreateCount: 60
     LifeTime: 5
     isBuffer: 0
 --- !u!1001 &100100000

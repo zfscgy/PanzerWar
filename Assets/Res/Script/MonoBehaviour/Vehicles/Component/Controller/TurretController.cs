@@ -5,6 +5,8 @@ public class TurretController : MonoBehaviour
 {
 	public Transform target, OriginTarget, Turret, gun;
 	public float turretDegreesPerSecond = 45.0f, gunDegreesPerSecond = 45.0f;
+    public float offset;
+
 	float maxGunAngle;
 	public float maxTurretAngle = 180;
 	Quaternion qTurret, qGun, qGunStart;
@@ -20,6 +22,7 @@ public class TurretController : MonoBehaviour
 		GunCenter.transform.parent = Turret.transform.parent;
 		GunCenter.transform.localPosition = Turret.localPosition;
 		GunCenter.transform.localEulerAngles = Turret.localEulerAngles;
+        GunCenter.transform.localEulerAngles += new Vector3(0, offset, 0);
 
 		if (target)
 			OriginTarget = target;
@@ -28,6 +31,7 @@ public class TurretController : MonoBehaviour
 		qGunStart = gun.transform.localRotation;
 		maxGunAngle = (UpMaxDegree + DownMaxDegree) / 2;
 		qGunStart.x -= (UpMaxDegree - maxGunAngle) * Mathf.Deg2Rad;
+         
 	}
 
 	void  Update ()

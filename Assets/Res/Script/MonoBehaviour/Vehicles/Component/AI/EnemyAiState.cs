@@ -277,9 +277,9 @@ public class EnemyAiState : BasePlayerState
 
 
 		
-		foreach (HitBox temp in transform.root.GetComponentsInChildren<HitBox>()) {
-			Destroy (temp);
-		}
+		//foreach (HitBox temp in transform.root.GetComponentsInChildren<HitBox>()) {
+		//	Destroy (temp);
+		//}
 		#if ClientCode
 
 		#region 炮塔飞天
@@ -291,11 +291,11 @@ public class EnemyAiState : BasePlayerState
 
 		PoolManager.CreateObject ("DestroyEffect", transform.position, transform.eulerAngles);
 		#endif
-		foreach (HitBox _HitBox in transform.root.GetComponentsInChildren<HitBox>()){
-			if(_HitBox){
-				_HitBox.enabled =false;
-			}
-		}
+		//foreach (HitBox _HitBox in transform.root.GetComponentsInChildren<HitBox>()){
+		//	if(_HitBox){
+		//		_HitBox.enabled =false;
+		//	}
+		//}
 
 		//TankScript.GetComponent<MouseTurret> ().target = null;
 
@@ -309,7 +309,7 @@ public class EnemyAiState : BasePlayerState
 
 			#region Nav
 			navmeshAgent.enabled = false;
-			Destroy(navmeshAgent.gameObject);
+			//Destroy(navmeshAgent.gameObject);
 			#endregion
 		}
 
